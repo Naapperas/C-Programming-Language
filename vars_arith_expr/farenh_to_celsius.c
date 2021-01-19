@@ -11,8 +11,8 @@ int main() // floating point version, more precise
 
     fahr = step;
     while(fahr <= upper){ // while loop, 'while' the condition is met, execute the code inside brackets
-        celsius = 5 * (fahr - 32) / 9; // integer division truncates: this means that 5/9 would become 0, making all celsius values efectively 0
-        printf("%f\t%f\n", fahr, celsius); // %f specifies floating point argument, \t inserts a tab
+        celsius = (5.0 / 9.0) * (fahr - 32); // integer division truncates: this means that 5/9 would become 0, making all celsius values efectively 0. Here we can to the division since we are working in floating point arithmetic
+        printf("%3.0f %6.1f\n", fahr, celsius); // %f specifies floating point argument, \t inserts a tab. Specifying a number on the % part of the format string specfies the minimum length to print the argument
         fahr += step;
     }
     
@@ -38,10 +38,3 @@ int main()
     
     return 0;
 }*/
-
-/*
-
-Exercise 1-3
-
-
-*/
