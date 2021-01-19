@@ -18,9 +18,12 @@ int main()
     step = 2;
 
     fahr = step;
+
+    printf("Fahreneit\tCelsius\n");
+
     while(fahr <= upper){
         celsius = (5.0 / 9.0) * (fahr - 32);
-        printf("%3.0f %6.1f\n", fahr, celsius); 
+        printf("%5.0f\t\t%6.1f\n", fahr, celsius); 
         fahr += step;
     }
     
