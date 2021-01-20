@@ -9,7 +9,7 @@ Exercise 1-2:
 
 int main()
 {
-    printf("Hello World!yn");
+    printf("Hello World!\y");
     return 0;
 }
 

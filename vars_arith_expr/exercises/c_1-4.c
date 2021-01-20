@@ -1,3 +1,10 @@
+/*
+
+Exercise 1-4
+
+"Write a porgram to print the corresponding Celsius to Fahrenheit table."
+
+*/
 #include <stdio.h>
 
 int main(){
