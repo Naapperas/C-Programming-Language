@@ -22,5 +22,5 @@ int main(){
         printf("%d\t%f\n", celsius, fahr);
         celsius += step;
     }
-
+    return 0;
 }
