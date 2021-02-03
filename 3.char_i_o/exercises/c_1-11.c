@@ -1,6 +1,6 @@
 /*
 
-Exercise 1-11: "How would you teste the word count program? What kinds of input are most likely to uncover bugs if there are any ?."
+Exercise 1-11: "How would you test the word count program? What kinds of input are most likely to uncover bugs if there are any ?."
 
 */
 
@@ -9,27 +9,35 @@ Exercise 1-11: "How would you teste the word count program? What kinds of input 
 #define IN 1
 #define OUT 0
 
+int count(int* nc, int* nl, int* nw, char input[]);
+
 int main()
 {
-    
     int nc, nl, nw;
 
-    nc = nl = nw = 0;
+    nc = nw = 0;
+    nl = 1;
 
-    int result = count(&nc, &nl, &nw);
+    char input[] = "This is the input\nto be tested by the function";
 
+    int result = count(&nc, &nl, &nw, input);
+
+    printf("Correct characters: %d ; Correct lines: %d; Correct words: %d.\n", nc == 46, nl == 2, nw == 10);
 
     return 0;
 }
 
 
-int count(int* nc, int* nl, int* nw)
+int count(int* nc, int* nl, int* nw, char input[])
 {
-    int c, nl, nw, nc, state;
+
+    int c, state;
 
     state = OUT;
 
-    while ((c = getchar()) != EOF)
+    int i = 0;
+
+    while ((c = input[i++]) != '\0')
     {
         ++(*nc);
         if(c == '\n')
@@ -42,8 +50,6 @@ int count(int* nc, int* nl, int* nw)
             ++(*nw);
         }
     }
-    
-    //printf("%d\t%d\t%d\n", nl, nc, nw);
 
     return 0;
 }
