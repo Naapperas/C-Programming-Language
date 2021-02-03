@@ -32,9 +32,7 @@ int main()
 int count(int* nc, int* nl, int* nw, char input[])
 {
 
-    int c, state;
-
-    state = OUT;
+    int c, state = OUT;
 
     int i = 0;
 
