@@ -18,11 +18,12 @@ int main()
     nc = nw = 0;
     nl = 1;
 
-    char input[] = "This is the input\nto be tested by the function";
+    char input[] = "This is the input\n\t,to be tested by the function";
 
     int result = count(&nc, &nl, &nw, input);
 
-    printf("Correct characters: %d ; Correct lines: %d; Correct words: %d.\n", nc == 46, nl == 2, nw == 10);
+    printf("Input: '%s'\n\n", input);
+    printf("Correct characters: %d ; Correct lines: %d; Correct words: %d.\n", nc == 48, nl == 2, nw == 10);
 
     return 0;
 }
